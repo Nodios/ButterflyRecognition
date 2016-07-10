@@ -1,0 +1,9 @@
+c:\users\josip\documents\visual studio 2013\Projects\ButterflyRecognition\ButterflyRecognition\bin\Debug\ButterflyRecognition.exe.config
+C:\Users\Josip\documents\visual studio 2013\Projects\ButterflyRecognition\ButterflyRecognition\obj\Debug\ButterflyRecognition.csprojResolveAssemblyReference.cache
+C:\Users\Josip\documents\visual studio 2013\Projects\ButterflyRecognition\ButterflyRecognition\obj\Debug\ButterflyRecognition.Form1.resources
+C:\Users\Josip\documents\visual studio 2013\Projects\ButterflyRecognition\ButterflyRecognition\obj\Debug\ButterflyRecognition.Properties.Resources.resources
+C:\Users\Josip\documents\visual studio 2013\Projects\ButterflyRecognition\ButterflyRecognition\obj\Debug\ButterflyRecognition.csproj.GenerateResource.Cache
+C:\Users\Josip\documents\visual studio 2013\Projects\ButterflyRecognition\ButterflyRecognition\bin\Debug\ButterflyRecognition.exe
+C:\Users\Josip\documents\visual studio 2013\Projects\ButterflyRecognition\ButterflyRecognition\bin\Debug\ButterflyRecognition.pdb
+C:\Users\Josip\documents\visual studio 2013\Projects\ButterflyRecognition\ButterflyRecognition\obj\Debug\ButterflyRecognition.exe
+C:\Users\Josip\documents\visual studio 2013\Projects\ButterflyRecognition\ButterflyRecognition\obj\Debug\ButterflyRecognition.pdb
