@@ -40,7 +40,7 @@ def colorPaletteToCSV():
                 f.write('{0},{1},{2},{3},{4},{5},{6},{7}\n'.format(d,c1,c2,c3,c4,c5,c6,folder[i]))
 
 
-def outputSingle(species=0, butterfly=1, testFolder=False, customImage=''):
+def outputSingle(species=0, butterfly=1, testFolder=False, customImage='', name=''):
     '''
     Creates Image object needed for prediction alghoritm.
 
@@ -83,7 +83,7 @@ def outputSingle(species=0, butterfly=1, testFolder=False, customImage=''):
     c6 = str(palette[5][0])+','+str(palette[5][1])+','+str(palette[5][2])
     print("c6")
 
-    print(d,c1,c2,c3,c4,c5,c6,folder[species])
+    #print(d,c1,c2,c3,c4,c5,c6,folder[species])
 
     outputData.rd = dominant[0]
     outputData.gd = dominant[1]
@@ -106,7 +106,10 @@ def outputSingle(species=0, butterfly=1, testFolder=False, customImage=''):
     outputData.r6 = palette[5][0]
     outputData.g6 = palette[5][1]
     outputData.b6 = palette[5][2]
-    outputData.name = folder[species]
+    if not customImage:
+        outputData.name = folder[species]
+    else:
+        outputData.name = name
 
     print("output ready")
     return outputData

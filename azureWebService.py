@@ -1,9 +1,11 @@
 import urllib.request # If you are using Python 3+, import urllib instead of urllib2
 import imageToCSV as service #import our module
-import json 
+import json
+import sys
 
+#path = str(sys.argv[0])
 
-def getImage(species=0, butterfly=1, testFolder=False, customImage=''):
+def getImage(species=0, butterfly=1, testFolder=False, customImage='',name=''):
     '''
     Retrieves image object containing all the data needed for the prediction.
 
@@ -24,7 +26,7 @@ def getImage(species=0, butterfly=1, testFolder=False, customImage=''):
 
     Output is Image object.
     '''
-    return service.outputSingle(species,butterfly,testFolder,customImage)
+    return service.outputSingle(species,butterfly,testFolder,customImage,name)
 
 def predictButterfly(image):
     '''
@@ -70,3 +72,7 @@ def predictButterfly(image):
         print(error.info())
 
         print(json.loads(error.read()))
+
+def predict(path):
+    x = getImage(path)
+    predictButterfly(x)
