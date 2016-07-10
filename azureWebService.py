@@ -1,11 +1,12 @@
 import urllib.request # If you are using Python 3+, import urllib instead of urllib2
 import imageToCSV as service #import our module
-import json
+import json 
+import simplejson
+
 import sys
+path = str(sys.argv[0])
 
-#path = str(sys.argv[0])
-
-def getImage(species=0, butterfly=1, testFolder=False, customImage='',name=''):
+def getImage(species=0, butterfly=1, testFolder=False, customImage=''):
     '''
     Retrieves image object containing all the data needed for the prediction.
 
@@ -26,7 +27,7 @@ def getImage(species=0, butterfly=1, testFolder=False, customImage='',name=''):
 
     Output is Image object.
     '''
-    return service.outputSingle(species,butterfly,testFolder,customImage,name)
+    return service.outputSingle(species,butterfly,testFolder,customImage)
 
 def predictButterfly(image):
     '''
@@ -64,7 +65,7 @@ def predictButterfly(image):
         # response = urllib.request.urlopen(req)
 
         result = response.read()
-        print(result) 
+        return simplejson.loads(result)
     except urllib.HTTPError.error:
         print("The request failed with status code: " + str(error.code))
 
@@ -72,7 +73,11 @@ def predictButterfly(image):
         print(error.info())
 
         print(json.loads(error.read()))
+        print(predictButterfly(getImage(path)))
 
-def predict(path):
-    x = getImage(path)
-    predictButterfly(x)
+def getPrediction(dictionary):
+    t1 = dictionary['Results']
+    t2 = t1['output1']
+    t3 = t2['value']
+    t4 = t3['Values']
+    return t4[0][26]
